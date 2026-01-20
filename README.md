@@ -43,6 +43,7 @@ Exemple de conversion en H264 compatible OpenCV :
 ffmpeg -y -i "IMG_5473.MOV" -c:v libx264 -pix_fmt yuv420p -movflags +faststart "IMG_5473_h264.mp4"
 
 ## ▶️ Lancer la détection + générer le CSV
+
 source .venv/bin/activate
 python traffic_mvp.py --source "/chemin/video.mp4" --show --csv metrics.csv --conf 0.50
 
@@ -77,6 +78,6 @@ Comptage précis par ligne/zone (ROI)
 
 Amélioration du filtrage (confiance, taille min, classes)
 
-👤 Auteur
+## 👤 Auteur
 
 Youssef BT
