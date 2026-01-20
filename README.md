@@ -36,24 +36,24 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-##🎬 Préparer la vidéo (si .MOV / HEVC)
+## 🎬 Préparer la vidéo (si .MOV / HEVC)
 
 Exemple de conversion en H264 compatible OpenCV :
 
 ffmpeg -y -i "IMG_5473.MOV" -c:v libx264 -pix_fmt yuv420p -movflags +faststart "IMG_5473_h264.mp4"
 
-##▶️ Lancer la détection + générer le CSV
+## ▶️ Lancer la détection + générer le CSV
 source .venv/bin/activate
 python traffic_mvp.py --source "/chemin/video.mp4" --show --csv metrics.csv --conf 0.50
 
-##📊 Lancer le dashboard
+## 📊 Lancer le dashboard
 
 ⚠️ Toujours lancer Streamlit via le python de l’environnement :
 
 source .venv/bin/activate
 python -m streamlit run dashboard.py
 
-##🧪 Démo rapide (preuve)
+## 🧪 Démo rapide (preuve)
 
 Fenêtre OpenCV : détection en direct
 
@@ -61,13 +61,13 @@ metrics.csv : fichier généré automatiquement
 
 Dashboard : affichage des dernières mesures + courbes
 
-##📌 Limites
+## 📌 Limites
 
 La vitesse en km/h est une estimation (sans calibration réelle caméra → mètres)
 
 Les faux positifs peuvent apparaître selon l’angle et la qualité vidéo
 
-##🚀 Perspectives
+## 🚀 Perspectives
 
 Calibration caméra (homographie / mètres par pixel)
 
