@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual env
+.venv/
+venv/
+
+# OS
+.DS_Store
+
+# Outputs
+runs/
+*.csv
+*.log
+
+# Videos (optional)
+*.mp4
+*.mov
